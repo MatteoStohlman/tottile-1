@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
+import {withState,compose,withHandlers} from 'recompose'
 import logo from './logo.svg';
 import './App.css';
+import SongList from 'Music/List/SongList'
+import AddSong from 'Music/Song/Add'
+import Video from 'Video/Modal'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+const App = ({
+  //PROPS FROM PARENT//
+
+  //STATE
+
+  //HANDLERS
+
+  //OTHER
+    ...props
+}) => {
+  return (
+    <div className="App">
+      {/*<AddSong/>
+      <SongList/>*/}
+      <Video/>
+    </div>
+  )
 }
 
-export default App;
+export default compose(
+
+)(App)
